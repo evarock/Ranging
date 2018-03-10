@@ -1,0 +1,8 @@
+D:\Studing\МЭО\Ranging\Ranging\bin\Debug\Ranging.exe.config
+D:\Studing\МЭО\Ranging\Ranging\bin\Debug\Ranging.exe
+D:\Studing\МЭО\Ranging\Ranging\bin\Debug\Ranging.pdb
+D:\Studing\МЭО\Ranging\Ranging\obj\Debug\Ranging.csprojResolveAssemblyReference.cache
+D:\Studing\МЭО\Ranging\Ranging\obj\Debug\Ranging.Properties.Resources.resources
+D:\Studing\МЭО\Ranging\Ranging\obj\Debug\Ranging.csproj.GenerateResource.Cache
+D:\Studing\МЭО\Ranging\Ranging\obj\Debug\Ranging.exe
+D:\Studing\МЭО\Ranging\Ranging\obj\Debug\Ranging.pdb
