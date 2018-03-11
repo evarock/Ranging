@@ -77,7 +77,7 @@ namespace Ranging
             if (rating == 0)
             {
                 //1) спросить у юзера, что лучше
-                //2) занести в CompAlt[o1, o2] и CompAlt[o2, o1] 1 или 2
+                //2) занести в CompAlt[o1, o2] и CompAlt[o2, o1] 1 (если о1) или 2 (если о2)
                 Comparisons++; //было сравнение
                 return first; //вернуть лучшую
             }
