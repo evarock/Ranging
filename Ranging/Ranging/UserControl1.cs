@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Ranging
 {
-    public partial class Form1 : Form
+    public partial class UserControl1 : UserControl
     {
         Button first = null;
         Button second = null;
@@ -18,18 +18,9 @@ namespace Ranging
         public List<Button> buttons = new List<Button>();
         public List<ComboBox> combos = new List<ComboBox>();
 
-        public Form1(int alt, int s)
+        public UserControl1(int alt, int s)
         {
             InitializeComponent();
-
-
-            //создание вкладок с экспертами
-            for (int i = 1; i < s; i++)
-            {
-                string title = "Эксперт " + (i + 1).ToString();
-                TabPage myTabPage = new TabPage(title);
-                expTabs.TabPages.Add(myTabPage);                
-            }
 
             BtnsToArray();
             CombosToArray();
@@ -39,11 +30,10 @@ namespace Ranging
                 buttons[i].Show();
             }
 
-            for(int i = 0; i < alt - 1; i++)
+            for (int i = 0; i < alt - 1; i++)
             {
                 combos[i].Show();
             }
-
         }
 
         private void InitAll()
@@ -65,7 +55,7 @@ namespace Ranging
             alt8.Text = "8";
             alt9.Text = "9";
             alt10.Text = "10";
-           
+
 
             buttons.Add(alt1);
             buttons.Add(alt2);
@@ -123,16 +113,16 @@ namespace Ranging
                         btnChange.Enabled = false;
                     }
                 }
-              
+
             }
         }
 
-       
+
         //ивенты KNOPO4EK))))
         private void alt1_Click(object sender, EventArgs e)
         {
             gotVal(ref alt1);
-            
+
         }
 
         private void alt2_Click(object sender, EventArgs e)
@@ -183,7 +173,7 @@ namespace Ranging
         //поменять местами
         private void btnChange_Click(object sender, EventArgs e)
         {
-            if((first != null) & (second != null)) 
+            if ((first != null) & (second != null))
             {
                 string temp = first.Text;
                 first.Text = second.Text;
@@ -194,11 +184,6 @@ namespace Ranging
                 second = null;
                 btnChange.Enabled = false;
             }
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
 
         }
     }

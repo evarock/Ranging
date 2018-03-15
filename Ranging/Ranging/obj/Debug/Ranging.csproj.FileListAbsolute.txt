@@ -6,3 +6,13 @@ D:\Studing\МЭО\Ranging\Ranging\obj\Debug\Ranging.Properties.Resources.resourc
 D:\Studing\МЭО\Ranging\Ranging\obj\Debug\Ranging.csproj.GenerateResource.Cache
 D:\Studing\МЭО\Ranging\Ranging\obj\Debug\Ranging.exe
 D:\Studing\МЭО\Ranging\Ranging\obj\Debug\Ranging.pdb
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\bin\Debug\Ranging.exe.config
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\bin\Debug\Ranging.exe
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\bin\Debug\Ranging.pdb
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.Form1.resources
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.Form2.resources
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.Properties.Resources.resources
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.csproj.GenerateResource.Cache
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.exe
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.pdb
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.csprojResolveAssemblyReference.cache
