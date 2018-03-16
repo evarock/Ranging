@@ -16,3 +16,5 @@ C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.cspro
 C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.exe
 C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.pdb
 C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.csprojResolveAssemblyReference.cache
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.UserControl1.resources
+C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.TotalForm.resources

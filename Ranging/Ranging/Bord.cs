@@ -30,8 +30,8 @@ namespace Ranging
         public int Experts { get; set; }
         public int Count { get; set; } //количество альтернатив
         public Dictionary<int, ArrayList> Alternatives = new Dictionary<int,ArrayList>(); //ключ - n эксперта,
-                                                                                  //значение - список его ранжирования
-        public ArrayList RangAlt; //итоговое ранжирование
+                                                                                          //значение - список его ранжирования
+        public ArrayList RangAlt = new ArrayList(); //итоговое ранжирование
 
         public Bord() { }
         public Bord(int experts, int count)
@@ -51,18 +51,10 @@ namespace Ranging
                 }
                 Alternatives.Add(i, al); //для каждого эксперта список его ранжирования
             }
-              /* ввод для примера
-            ArrayList al = new ArrayList(Count);
-            al.Add(new BordAlt(2, 1));
-            al.Add(new BordAlt(1, 2));
-            al.Add(new BordAlt(0, 0));
-            ArrayList al2 = new ArrayList(Count);
-            al2.Add(new BordAlt(0, 1));
-            al2.Add(new BordAlt(2, 1));
-            al2.Add(new BordAlt(1, 0));
-            Alternatives.Add(0, al);
-            Alternatives.Add(1, al2);*/
+        }
 
+        public void Ranging()
+        {
             RangAlt = new ArrayList(Count); //итоговое ранжирование без знаков и оценок
             for (int i = 0; i < Count; i++)
             {
@@ -72,6 +64,8 @@ namespace Ranging
 
         public ArrayList Do()
         {
+            Ranging();
+
             for (int i = 0; i < Experts; i++)
             {
                 ArrayList al = new ArrayList();
@@ -83,9 +77,9 @@ namespace Ranging
                 for (int j = 0; j < Count; j++) //накопление итоговых оценок
                 {
                     BordAlt b = (BordAlt)al[j];
-                    BordAlt bh = (BordAlt)RangAlt[b.Value];                  
+                    BordAlt bh = (BordAlt)RangAlt[b.Value-1];                  
                     bh.Grade += b.Grade;
-                    RangAlt[b.Value] = bh;
+                    RangAlt[b.Value-1] = bh;
                 }
             }
             RangAlt.Sort(new altCompaper()); //итоговая сортировка альт
@@ -159,4 +153,19 @@ namespace Ranging
             return al;
         }
     }
+
+
+
+    /* ввод для примера
+    ArrayList al = new ArrayList(Count);
+    al.Add(new BordAlt(2, 1));
+    al.Add(new BordAlt(1, 2));
+    al.Add(new BordAlt(0, 0));
+    Alternatives.Add(0, al);
+    ArrayList al2 = new ArrayList(Count);
+    al2.Add(new BordAlt(0, 1));
+    al2.Add(new BordAlt(2, 1));
+    al2.Add(new BordAlt(1, 0));
+    Alternatives.Add(1, al2);*/
+
 }

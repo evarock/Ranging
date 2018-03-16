@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,82 +16,85 @@ namespace Ranging
         Button first = null;
         Button second = null;
 
-        public List<Button> buttons = new List<Button>();
-        public List<ComboBox> combos = new List<ComboBox>();
+        int altern; //кол-во альтернатив
+        int exp; //сколько всего экспертов
+        int n; //номер нынешнего эксперта
 
-        public Form1(int alt, int s)
+        public List<Button> AllTheButtons = new List<Button>();
+
+        public Form1(int alt, int s, int num)
         {
             InitializeComponent();
 
+            altern = alt;
+            exp = s;
+            n = num;
 
-            //создание вкладок с экспертами
-            for (int i = 1; i < s; i++)
-            {
-                string title = "Эксперт " + (i + 1).ToString();
-                TabPage myTabPage = new TabPage(title);
-                expTabs.TabPages.Add(myTabPage);                
-            }
+            this.Text = "Эксперт " + (n+1).ToString();
 
             BtnsToArray();
-            CombosToArray();
 
-            for (int i = 0; i < alt; i++)
+            for (int i = 0; i < alt+alt-1; i++)
             {
-                buttons[i].Show();
-            }
-
-            for(int i = 0; i < alt - 1; i++)
-            {
-                combos[i].Show();
+                AllTheButtons[i].Show();
             }
 
         }
 
         private void InitAll()
         {
-            BtnsToArray();
-            CombosToArray();
+            first = null;
+            second = null;
+            nullArrayButton();
         }
 
         //заполнить массив кнопок
         private void BtnsToArray()
         {
-            alt1.Text = "1";
-            alt2.Text = "2";
-            alt3.Text = "3";
-            alt4.Text = "4";
-            alt5.Text = "5";
-            alt6.Text = "6";
-            alt7.Text = "7";
-            alt8.Text = "8";
-            alt9.Text = "9";
-            alt10.Text = "10";
-           
+            AllTheButtons.Add(alt1);
+            AllTheButtons.Add(btnSymb1);
+            AllTheButtons.Add(alt2);
+            AllTheButtons.Add(btnSymb2);
+            AllTheButtons.Add(alt3);
+            AllTheButtons.Add(btnSymb3);
+            AllTheButtons.Add(alt4);
+            AllTheButtons.Add(btnSymb4);
+            AllTheButtons.Add(alt5);
+            AllTheButtons.Add(btnSymb5);
+            AllTheButtons.Add(alt6);
+            AllTheButtons.Add(btnSymb6);
+            AllTheButtons.Add(alt7);
+            AllTheButtons.Add(btnSymb7);
+            AllTheButtons.Add(alt8);
+            AllTheButtons.Add(btnSymb8);
+            AllTheButtons.Add(alt9);
+            AllTheButtons.Add(btnSymb9);
+            AllTheButtons.Add(alt10);
+            AllTheButtons.Add(btnSymb10);
 
-            buttons.Add(alt1);
-            buttons.Add(alt2);
-            buttons.Add(alt3);
-            buttons.Add(alt4);
-            buttons.Add(alt5);
-            buttons.Add(alt6);
-            buttons.Add(alt7);
-            buttons.Add(alt8);
-            buttons.Add(alt9);
-            buttons.Add(alt10);
+
+            nullArrayButton();
         }
-
-        private void CombosToArray()
+        
+        //обNULLить))) массив кнопок
+        private void nullArrayButton()
         {
-            combos.Add(comboBox1);
-            combos.Add(comboBox2);
-            combos.Add(comboBox3);
-            combos.Add(comboBox4);
-            combos.Add(comboBox5);
-            combos.Add(comboBox6);
-            combos.Add(comboBox7);
-            combos.Add(comboBox8);
-            combos.Add(comboBox9);
+            int i = 1;
+            foreach (Button b in AllTheButtons)
+            {
+                b.BackColor = Color.White;
+                if (!(b.Text == "=") && !(b.Text == ">"))
+                {
+                    b.Text = i.ToString();
+                    i++;
+                }else
+                {
+                    b.Text = "=";
+                }
+            }
+
         }
+
 
         //взять кнопку в first или в second
         private void gotVal(ref Button b)
@@ -197,9 +201,134 @@ namespace Ranging
 
         }
 
+        //сбросить всё нафиг
         private void button2_Click(object sender, EventArgs e)
         {
+            InitAll();
+        }
 
+        private void changeButtonSymbol(ref Button b)
+        {
+            if (b.Text == "=")
+            {
+                b.Text = ">";
+            }
+            else
+            {
+                b.Text = "=";
+            }
+        }
+
+        private void btnSymb1_Click(object sender, EventArgs e)
+        {
+            changeButtonSymbol(ref btnSymb1);
+        }
+
+        private void btnSymb2_Click(object sender, EventArgs e)
+        {
+            changeButtonSymbol(ref btnSymb2);
+        }
+
+        private void btnSymb3_Click(object sender, EventArgs e)
+        {
+            changeButtonSymbol(ref btnSymb3);
+        }
+
+        private void btnSymb4_Click(object sender, EventArgs e)
+        {
+            changeButtonSymbol(ref btnSymb4);
+        }
+
+        private void btnSymb5_Click(object sender, EventArgs e)
+        {
+            changeButtonSymbol(ref btnSymb5);
+        }
+
+        private void btnSymb6_Click(object sender, EventArgs e)
+        {
+            changeButtonSymbol(ref btnSymb6);
+        }
+
+        private void btnSymb7_Click(object sender, EventArgs e)
+        {
+            changeButtonSymbol(ref btnSymb7);
+        }
+
+        private void btnSymb8_Click(object sender, EventArgs e)
+        {
+            changeButtonSymbol(ref btnSymb8);
+        }
+
+        private void btnSymb9_Click(object sender, EventArgs e)
+        {
+            changeButtonSymbol(ref btnSymb9);
+        }
+
+        
+        private int convertToMark(string s, int i)
+        {
+            int res = 0;
+
+            if (i != (altern * 2-1))
+            {
+                if (s == ">")
+                {
+                    res = 1;
+                }
+
+                if (s == "=")
+                {
+                    res = 2;
+                }
+            }
+            
+
+
+            return res;
+            
+        }
+
+        ////временный для проверки
+        public string arrtostr(ArrayList ar)
+        {
+            string arrr = "";
+
+            foreach (BordAlt ba in ar)
+            {
+                arrr = arrr + ba.Value.ToString() + " " + ba.Sign.ToString();
+            }
+
+
+            return arrr;
+        }
+
+        //ок!
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+
+            ArrayList al = new ArrayList();
+            while(i<altern*2)
+            {
+                al.Add(new BordAlt(Convert.ToInt32(AllTheButtons[i].Text), convertToMark(AllTheButtons[i+1].Text, i+1)));
+
+                i += 2;
+            }
+
+            StatsArray.Alterns.Add(n,al); //добавить в Dictionary
+
+            if (n < exp-1) //если это не последний эксперт...
+            {
+                Form1 f = new Form1(altern, exp, n + 1); //создать новую форму, закрыть нынешнюю
+                f.ShowDialog();
+            }
+            else
+            {
+                TotalForm tf = new TotalForm(altern, exp);
+                tf.ShowDialog();
+            }
+            this.Close();
+            //MessageBox.Show(arrtostr(al)); //проверка что всё норм
         }
     }
 }

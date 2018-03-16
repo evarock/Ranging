@@ -19,6 +19,8 @@ namespace Ranging
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form2());
 
+
+
             //Tournament t = new Tournament(5);
             //ArrayList result = t.Do();
             //int comp = t.Comparisons; //сравнений
