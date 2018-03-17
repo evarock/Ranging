@@ -1,6 +1,6 @@
 ﻿namespace Ranging
 {
-    partial class Form1
+    partial class BordInputForm
     {
         /// <summary>
         /// Требуется переменная конструктора.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button2 = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnChange = new System.Windows.Forms.Button();
@@ -42,10 +41,8 @@
             this.alt3 = new System.Windows.Forms.Button();
             this.alt2 = new System.Windows.Forms.Button();
             this.alt1 = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSymb10 = new System.Windows.Forms.Button();
             this.btnSymb9 = new System.Windows.Forms.Button();
             this.btnSymb8 = new System.Windows.Forms.Button();
             this.btnSymb7 = new System.Windows.Forms.Button();
@@ -56,8 +53,6 @@
             this.btnSymb2 = new System.Windows.Forms.Button();
             this.btnSymb1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSymb10 = new System.Windows.Forms.Button();
-            this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -250,26 +245,6 @@
             this.alt1.Visible = false;
             this.alt1.Click += new System.EventHandler(this.alt1_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(83, 48);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(82, 22);
-            this.toolStripMenuItem2.Text = ">";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(82, 22);
-            this.toolStripMenuItem3.Text = "=";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -298,6 +273,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(968, 209);
             this.panel1.TabIndex = 1;
+            // 
+            // btnSymb10
+            // 
+            this.btnSymb10.Location = new System.Drawing.Point(863, 79);
+            this.btnSymb10.Name = "btnSymb10";
+            this.btnSymb10.Size = new System.Drawing.Size(38, 32);
+            this.btnSymb10.TabIndex = 28;
+            this.btnSymb10.Text = "*";
+            this.btnSymb10.UseVisualStyleBackColor = true;
+            this.btnSymb10.Visible = false;
             // 
             // btnSymb9
             // 
@@ -410,17 +395,7 @@
             this.panel2.Size = new System.Drawing.Size(968, 97);
             this.panel2.TabIndex = 22;
             // 
-            // btnSymb10
-            // 
-            this.btnSymb10.Location = new System.Drawing.Point(863, 79);
-            this.btnSymb10.Name = "btnSymb10";
-            this.btnSymb10.Size = new System.Drawing.Size(38, 32);
-            this.btnSymb10.TabIndex = 28;
-            this.btnSymb10.Text = "*";
-            this.btnSymb10.UseVisualStyleBackColor = true;
-            this.btnSymb10.Visible = false;
-            // 
-            // Form1
+            // BordInputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -428,9 +403,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "BordInputForm";
             this.Text = "Метод Борда";
-            this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -438,9 +412,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.Button alt10;
         private System.Windows.Forms.Button alt9;
         private System.Windows.Forms.Button alt8;

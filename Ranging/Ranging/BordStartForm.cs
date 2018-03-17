@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Ranging
 {
-    public partial class Form2 : Form
+    public partial class BordStartForm : Form
     {
-        public Form2()
+        public BordStartForm()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace Ranging
             Dictionary<int, ArrayList> Alts = new Dictionary<int, ArrayList>();
 
             //передаётся число АЛЬТЕРНАТИВ и ЭКСПЕРТОВ
-            Form1 f = new Form1(Convert.ToInt32(numAlt.Value), Convert.ToInt32(numExp.Value), 0);            
+            BordInputForm f = new BordInputForm(Convert.ToInt32(numAlt.Value), Convert.ToInt32(numExp.Value), 0);            
             f.ShowDialog();
             this.Close();
         }

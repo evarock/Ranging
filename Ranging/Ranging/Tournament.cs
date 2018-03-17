@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace Ranging
 {
+
+    //Tournament t = new Tournament(5);
+    //ArrayList result = t.Do();
+    //int comp = t.Comparisons; //сравнений
+
     public class Tournament
     {
         public int Count { get; set; } //количество альтернатив

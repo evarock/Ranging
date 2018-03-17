@@ -17,16 +17,8 @@ namespace Ranging
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
+            Application.Run(new BordStartForm());
 
-
-
-            //Tournament t = new Tournament(5);
-            //ArrayList result = t.Do();
-            //int comp = t.Comparisons; //сравнений
-
-            //Bord b = new Bord(2, 3);
-            //b.Do();
         }
     }
 }

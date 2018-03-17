@@ -18,3 +18,13 @@ C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.pdb
 C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.csprojResolveAssemblyReference.cache
 C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.UserControl1.resources
 C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.TotalForm.resources
+C:\Users\Mira\Desktop\Ranging\Ranging\Ranging\bin\Debug\Ranging.exe.config
+C:\Users\Mira\Desktop\Ranging\Ranging\Ranging\bin\Debug\Ranging.exe
+C:\Users\Mira\Desktop\Ranging\Ranging\Ranging\bin\Debug\Ranging.pdb
+C:\Users\Mira\Desktop\Ranging\Ranging\Ranging\obj\Debug\Ranging.Properties.Resources.resources
+C:\Users\Mira\Desktop\Ranging\Ranging\Ranging\obj\Debug\Ranging.TotalForm.resources
+C:\Users\Mira\Desktop\Ranging\Ranging\Ranging\obj\Debug\Ranging.csproj.GenerateResource.Cache
+C:\Users\Mira\Desktop\Ranging\Ranging\Ranging\obj\Debug\Ranging.exe
+C:\Users\Mira\Desktop\Ranging\Ranging\Ranging\obj\Debug\Ranging.pdb
+C:\Users\Mira\Desktop\Ranging\Ranging\Ranging\obj\Debug\Ranging.BordInputForm.resources
+C:\Users\Mira\Desktop\Ranging\Ranging\Ranging\obj\Debug\Ranging.BordStartForm.resources

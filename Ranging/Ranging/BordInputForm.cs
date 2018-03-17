@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Ranging
 {
-    public partial class Form1 : Form
+    public partial class BordInputForm : Form
     {
         Button first = null;
         Button second = null;
@@ -22,7 +22,7 @@ namespace Ranging
 
         public List<Button> AllTheButtons = new List<Button>();
 
-        public Form1(int alt, int s, int num)
+        public BordInputForm(int alt, int s, int num)
         {
             InitializeComponent();
 
@@ -319,7 +319,7 @@ namespace Ranging
 
             if (n < exp-1) //если это не последний эксперт...
             {
-                Form1 f = new Form1(altern, exp, n + 1); //создать новую форму, закрыть нынешнюю
+                BordInputForm f = new BordInputForm(altern, exp, n + 1); //создать новую форму, закрыть нынешнюю
                 f.ShowDialog();
             }
             else
