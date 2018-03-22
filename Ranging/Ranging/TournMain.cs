@@ -17,6 +17,8 @@ namespace Ranging
     {
         public int Count { get; set; } //количество альтернатив
 
+        public List<int> choices = new List<int>();
+
         public ArrayList Alternatives; //альт, удаляются по мере ранжирования (переход в RangAlt)
 
         public int[,] CompAlt { get; set; }  //экспертные сравнения альт между собой 
@@ -46,10 +48,9 @@ namespace Ranging
 
             int comp = Comparisons;
 
-            //просто проверка что всё работает
-            label1.Text = ArrToStr();
+            //просто проверка что всё работает            
             label2.Text = comp.ToString();
-
+            label1.Text = ArrToStr(RangAlt);
         }
 
 
@@ -136,11 +137,14 @@ namespace Ranging
                             CompAlt[o2, o1] = 2;
                             result = second;
                         }
-                    }
-
-                    Comparisons++; //было сравнение
+                    }                    
                 }
-                return first; //вернуть лучшую
+
+                choices.Add(tf.ButtonClicked);
+
+                Comparisons++; //было сравнение
+                return result; //вернуть лучшую
+
             }
             else if (rating == 1) //если в CompAlt есть значение, то вернуть соответствующее 
             {
@@ -159,13 +163,13 @@ namespace Ranging
 
         }
 
-        public string ArrToStr()
+        public string ArrToStr(ArrayList ar)
         {
             string arrr = "";
 
-            for (int i = 0; i<Count; i++)
+            foreach(int a in ar)
             {
-                arrr = arrr + RangAlt[i].ToString();
+                arrr = arrr + (a+1).ToString();
             }
 
             return arrr;
