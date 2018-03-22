@@ -9,8 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//я перенесла сюда всё содержимое класса Tournament, потому что так проще и лучше
 
+//я перенесла сюда всё содержимое класса Tournament, потому что так проще и лучше
 namespace Ranging
 {
     public partial class TournMain : Form
@@ -28,27 +28,27 @@ namespace Ranging
             InitializeComponent();
             Count = count;
             Alternatives = new ArrayList();
-            RangAlt = new ArrayList();
+            RangAlt = new ArrayList();                     
             for (int i = 0; i < Count; i++)
             {
                 Alternatives.Add(i); //порядковые номера с 0
             }
             CompAlt = new int[Count, Count]; //пустая таблица сравнений
             Do();
-            label1.Text = ArrToStr();
-            label2.Text = Comparisons.ToString();
+            textBox1.Text = RangAltToString(); //показать результат
+            textBox2.Text = textBox2.Text+" "+Comparisons.ToString(); //показать количество сравнений
         }
 
         public void Do()
         {
             while (Count > 1)
             {
-                Object o = BestAlt(Alternatives);
+                Object o = BestAlt(Alternatives);                
                 Alternatives.Remove(o);
                 RangAlt.Add(o);
-                --Count;
+                --Count;                
             }
-            RangAlt.Add(Alternatives[0]); //добавление последнего
+            RangAlt.Add(Alternatives[0]); //добавление последнего                       
             Alternatives.Clear();
         }
 
@@ -65,6 +65,7 @@ namespace Ranging
                 i = i + 2;
                 pair--;
             }
+            
             //непарная альт всегда проходит дальше
             if (alts.Count % 2 != 0)
             {
@@ -88,6 +89,7 @@ namespace Ranging
             int o1 = (int)first;
             int o2 = (int)second;
             int rating = CompAlt[o1, o2]; //значение из таблицы сравнений
+
             //если значения ещё нет, то
             if (rating == 0)
             {
@@ -123,13 +125,8 @@ namespace Ranging
             }
             return result;
         }
-
-        private void TournMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        public string ArrToStr()
+        
+        public string RangAltToString()
         {
             string arrr = "";
             int o;
