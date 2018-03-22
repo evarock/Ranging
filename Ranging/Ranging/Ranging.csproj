@@ -68,6 +68,24 @@
       <DependentUpon>TotalForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Tournament.cs" />
+    <Compile Include="TournamentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TournamentForm.Designer.cs">
+      <DependentUpon>TournamentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TournMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TournMain.Designer.cs">
+      <DependentUpon>TournMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TournStartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TournStartForm.Designer.cs">
+      <DependentUpon>TournStartForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BordInputForm.resx">
       <DependentUpon>BordInputForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +103,15 @@
     </Compile>
     <EmbeddedResource Include="TotalForm.resx">
       <DependentUpon>TotalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TournamentForm.resx">
+      <DependentUpon>TournamentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TournMain.resx">
+      <DependentUpon>TournMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TournStartForm.resx">
+      <DependentUpon>TournStartForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

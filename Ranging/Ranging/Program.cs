@@ -17,7 +17,8 @@ namespace Ranging
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BordStartForm());
+            // Application.Run(new BordStartForm());
+            Application.Run(new TournStartForm());
 
         }
     }

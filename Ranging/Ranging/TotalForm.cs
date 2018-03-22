@@ -103,5 +103,9 @@ namespace Ranging
             return res;
         }
 
+        private void TotalForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
