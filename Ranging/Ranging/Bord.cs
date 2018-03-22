@@ -38,13 +38,11 @@ namespace Ranging
         {
             this.Experts = experts;
             this.Count = count;  
-            //!!!ввод с ui по каждому эксперту!!! 
             for (int i = 0; i < Experts; i++)
             {
                 ArrayList al = new ArrayList(Count);
                 for (int j = 0; j < Count; j++)
                 {
-                    //!!ввод n альт и оценки юзером (больше, равна) = sign. последняя sign - 0!!
                     int n = 0;
                     int sign = 1; //например, больше
                     al.Add(new BordAlt(n, sign));                  
@@ -153,19 +151,4 @@ namespace Ranging
             return al;
         }
     }
-
-
-
-    /* ввод для примера
-    ArrayList al = new ArrayList(Count);
-    al.Add(new BordAlt(2, 1));
-    al.Add(new BordAlt(1, 2));
-    al.Add(new BordAlt(0, 0));
-    Alternatives.Add(0, al);
-    ArrayList al2 = new ArrayList(Count);
-    al2.Add(new BordAlt(0, 1));
-    al2.Add(new BordAlt(2, 1));
-    al2.Add(new BordAlt(1, 0));
-    Alternatives.Add(1, al2);*/
-
 }

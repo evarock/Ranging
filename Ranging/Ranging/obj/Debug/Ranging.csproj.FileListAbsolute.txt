@@ -29,3 +29,17 @@ C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.BordS
 C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.TournamentForm.resources
 C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.TournMain.resources
 C:\Users\Mirana\Documents\GitHub\Ranging\Ranging\Ranging\obj\Debug\Ranging.TournStartForm.resources
+D:\Studing\МЭО\Ranging\Ranging\Ranging\bin\Debug\Ranging.exe.config
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.exe
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.pdb
+D:\Studing\МЭО\Ranging\Ranging\Ranging\bin\Debug\Ranging.exe
+D:\Studing\МЭО\Ranging\Ranging\Ranging\bin\Debug\Ranging.pdb
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.csprojResolveAssemblyReference.cache
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.BordInputForm.resources
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.BordStartForm.resources
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.Properties.Resources.resources
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.TotalForm.resources
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.TournamentForm.resources
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.TournMain.resources
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.TournStartForm.resources
+D:\Studing\МЭО\Ranging\Ranging\Ranging\obj\Debug\Ranging.csproj.GenerateResource.Cache

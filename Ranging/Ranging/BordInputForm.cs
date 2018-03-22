@@ -38,7 +38,6 @@ namespace Ranging
             {
                 AllTheButtons[i].Show();
             }
-
         }
 
         private void InitAll()
@@ -72,7 +71,6 @@ namespace Ranging
             AllTheButtons.Add(alt10);
             AllTheButtons.Add(btnSymb10);
 
-
             nullArrayButton();
         }
         
@@ -87,14 +85,13 @@ namespace Ranging
                 {
                     b.Text = i.ToString();
                     i++;
-                }else
+                }
+                else
                 {
                     b.Text = "=";
                 }
             }
-
         }
-
 
         //взять кнопку в first или в second
         private void gotVal(ref Button b)
@@ -126,17 +123,13 @@ namespace Ranging
                         second = null;
                         btnChange.Enabled = false;
                     }
-                }
-              
+                }  
             }
         }
 
-       
-        //ивенты KNOPO4EK))))
         private void alt1_Click(object sender, EventArgs e)
         {
-            gotVal(ref alt1);
-            
+            gotVal(ref alt1);         
         }
 
         private void alt2_Click(object sender, EventArgs e)
@@ -187,7 +180,7 @@ namespace Ranging
         //поменять местами
         private void btnChange_Click(object sender, EventArgs e)
         {
-            if((first != null) & (second != null)) 
+            if ((first != null) & (second != null)) 
             {
                 string temp = first.Text;
                 first.Text = second.Text;
@@ -198,7 +191,6 @@ namespace Ranging
                 second = null;
                 btnChange.Enabled = false;
             }
-
         }
 
         //сбросить всё нафиг
@@ -268,7 +260,6 @@ namespace Ranging
         private int convertToMark(string s, int i)
         {
             int res = 0;
-
             if (i != (altern * 2-1))
             {
                 if (s == ">")
@@ -281,37 +272,17 @@ namespace Ranging
                     res = 2;
                 }
             }
-            
-
-
-            return res;
-            
-        }
-
-        ////временный для проверки
-        public string arrtostr(ArrayList ar)
-        {
-            string arrr = "";
-
-            foreach (BordAlt ba in ar)
-            {
-                arrr = arrr + ba.Value.ToString() + " " + ba.Sign.ToString();
-            }
-
-
-            return arrr;
+            return res;          
         }
 
         //ок!
         private void button1_Click(object sender, EventArgs e)
         {
             int i = 0;
-
             ArrayList al = new ArrayList();
-            while(i<altern*2)
+            while (i < altern*2)
             {
                 al.Add(new BordAlt(Convert.ToInt32(AllTheButtons[i].Text), convertToMark(AllTheButtons[i+1].Text, i+1)));
-
                 i += 2;
             }
 
@@ -328,7 +299,6 @@ namespace Ranging
                 tf.ShowDialog();
             }
             this.Close();
-            //MessageBox.Show(arrtostr(al)); //проверка что всё норм
         }
     }
 }

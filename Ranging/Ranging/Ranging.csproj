@@ -67,7 +67,6 @@
     <Compile Include="TotalForm.Designer.cs">
       <DependentUpon>TotalForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tournament.cs" />
     <Compile Include="TournamentForm.cs">
       <SubType>Form</SubType>
     </Compile>
