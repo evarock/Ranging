@@ -28,7 +28,8 @@ namespace Ranging
             InitializeComponent();
             Count = count;
             Alternatives = new ArrayList();
-            RangAlt = new ArrayList();                     
+            RangAlt = new ArrayList();
+            Comparisons = 0;
             for (int i = 0; i < Count; i++)
             {
                 Alternatives.Add(i); //порядковые номера с 0
@@ -41,14 +42,18 @@ namespace Ranging
 
         public void Do()
         {
+            int lastComp = 0;
             while (Count > 1)
             {
-                Object o = BestAlt(Alternatives);                
+                lastComp = Comparisons;
+                Object o = BestAlt(Alternatives);
+                textBox3.AppendText(" "+ArrToString(Alternatives) + " (Сравнений: " + (Comparisons-lastComp).ToString() + ")\r\n");
+
                 Alternatives.Remove(o);
                 RangAlt.Add(o);
                 --Count;                
             }
-            RangAlt.Add(Alternatives[0]); //добавление последнего                       
+            RangAlt.Add(Alternatives[0]); //добавление последнего 
             Alternatives.Clear();
         }
 
@@ -141,6 +146,21 @@ namespace Ranging
             }
             return arrr;
         }
-    }
 
+        public string ArrToString(ArrayList ar)
+        {
+            string arrr = "";
+            int o;
+            for (int i = 0; i < ar.Count; i++)
+            {
+                o = (int)ar[i];
+                if (arrr != "")
+                {
+                    arrr = arrr + " ";
+                }
+                arrr = arrr + (o + 1).ToString();
+            }
+            return arrr;
+        }
+    }
 }
